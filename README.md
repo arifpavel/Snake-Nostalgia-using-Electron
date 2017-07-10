@@ -4,24 +4,10 @@ This is a bare-bones electron app that uses jQuery, Twitter's Bootstrap for
 styling, and Photon kit for icons (http://photonkit.com/) without any other extraneous 
 modules.  The only node_modules dependences are: bootstrap, jquery, and tether.  
 
-This repo with npm globally installed electron is ~ 7mb in size when cloned
-and creates a dummy app with this startup screen:
 
-![Alt text](Screenshot.jpeg?raw=true "Screen shot")
-
-Clicking the button use nodejs services to alter the text above the button to
-show the current OS's type.
-
-Typescript:
-===========
-For experimentation, a Typescript source file is included.  If you develop
-with the Atom editor, you can use ```npm install -g typescript```
-and ```apm install atom-typescript``` so that if you edit
-file src\setOSWithTS.ts, the file will automatically be compiled to
-src\js\setOSwithTS.js.  
-
-These files are currently unused, but show an example of Typescript, and how
-to incorporate into an Eelcton project. 
+Snake Nostalgia:
+================
+For experimentation, this is a popular snake game prototype just to play with electron & see its power.
 
 Prerequisites:
 ==============
@@ -34,7 +20,7 @@ tweek in order to download npm modules.
 For the first time setup:
 =========================
 Issue the following commands after having the prerequisites:
-* ```git clone https://github.com/dkelosky/electron-jquery-bootstrap.git```
+* ```git clone https://github.com/arifpavel/Snake-Nostalgia-using-Electron```
 * ```cd electron-jquery-bootstrap```
 * ```npm install```
 * ```electron .```
@@ -42,3 +28,11 @@ Issue the following commands after having the prerequisites:
 After first setup:
 ==================
 After closing the app for the first time, it can be restarted via ```electron .```
+
+Build Standalone win32(windows),MacOS or Linux App:
+===================================================
+
+Please use electron build package https://github.com/electron-userland/electron-packager
+
+==========
+Thank You
