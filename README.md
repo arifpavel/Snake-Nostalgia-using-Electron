@@ -1,8 +1,8 @@
 Intro:
 ======
 This is a bare-bones electron app that uses jQuery, Twitter's Bootstrap for
-styling, and Photon kit for icons (http://photonkit.com/) without any other extraneous 
-modules.  The only node_modules dependences are: bootstrap, jquery, and tether.  
+styling, Font Awsome. And Photon kit for icons (http://photonkit.com/) without any other extraneous 
+modules can also added for further use.  The only node_modules dependences are: bootstrap, jquery, and tether.  
 
 
 Snake Nostalgia:
