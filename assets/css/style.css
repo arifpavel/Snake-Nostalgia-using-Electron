@@ -1,0 +1,247 @@
+
+.full-width{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.cell{
+    position: absolute;
+    background: #ff9900;
+    border-radius: 3px;
+    z-index: 10;
+    /*transition:.02s;*/
+    box-shadow: 0px 0px 3px #000;
+}
+
+.cell_1>.cellHead{
+    content: "";
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    right:-2px;
+    bottom:-2px;
+    background: #ff9900;
+    border-radius: 100%;
+    box-shadow: 0px 0px 3px #000;
+
+}
+
+.anmZoomBounce{
+    animation-name: zoomBounce;
+    animation-duration:.5s;
+    /*animation-timing-function:ease-in-out;*/
+    animation-iteration-count:1;
+
+}
+
+.cell:nth-last-child(1){transform:scale(.75);opacity:.75;  }
+.cell:nth-last-child(2){transform:scale(.8);opacity:.8; }
+.cell:nth-last-child(3){transform:scale(.85);opacity:.85; }
+.cell:nth-last-child(4){transform:scale(.9);opacity:.9; }
+.cell:nth-last-child(5){transform:scale(.95);opacity:.95; }
+
+
+/*.cell{opacity: 1 !important;}*/
+
+@keyframes zoomBounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes zoomBounce2{
+    0%{
+        transform: scale(1.5);
+    }
+    50%{
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+
+
+.cell_1[data-move-now='right']{ border-radius:0 5px 5px 0 ; }
+.cell_1[data-move-now='down']{ border-radius:0 0 5px 5px; }
+.cell_1[data-move-now='left']{ border-radius:5px 0 0 5px; }
+.cell_1[data-move-now='up']{ border-radius:5px 5px 0 0; }
+
+.cellHead:after{
+    content: "";
+    position: absolute;
+    z-index: 5;
+    right: -3px;
+    top: 4px;
+    width: 0px;
+    height: 0px;
+    border: 6px solid #ff9900;
+    border-color: #ff9900 transparent transparent transparent;
+    transform:rotate(0deg);
+    animation-name: mouthUpperLip;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+}
+.cellHead:before{
+    content: "";
+    position: absolute;
+    z-index: 5;
+    right: -3px;
+    bottom: 4px;
+    width: 0px;
+    height: 0px;
+    border: 6px solid #ff9900;
+    border-color:transparent transparent  #ff9900 transparent;
+    transform:rotate(0deg);
+    animation-name: mouthLowerLip;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes mouthUpperLip{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(10deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}@keyframes mouthLowerLip{
+     0%{
+         transform:rotate(0deg);
+     }
+     50%{
+         transform:rotate(-10deg);
+     }
+     100%{
+         transform:rotate(0deg);
+     }
+ }
+
+.cell_1[data-move-now='right'] .cellHead{transform:rotate(0deg); }
+.cell_1[data-move-now='down'] .cellHead{transform:rotate(90deg); }
+.cell_1[data-move-now='left'] .cellHead{transform:rotate(180deg); }
+.cell_1[data-move-now='up'] .cellHead{transform:rotate(270deg); }
+
+
+.cell[data-move-now='right'][data-moving-now='up'],.cell[data-move-now='down'][data-moving-now='left']{ border-radius:8px 0 0 0; }
+.cell[data-move-now='down'][data-moving-now='right'],.cell[data-move-now='left'][data-moving-now='up']{ border-radius:0 8px 0 0; }
+.cell[data-move-now='left'][data-moving-now='down'],.cell[data-move-now='up'][data-moving-now='right']{ border-radius:0 0 8px 0; }
+.cell[data-move-now='up'][data-moving-now='left'],.cell[data-move-now='right'][data-moving-now='down']{ border-radius:0 0 0 8px; }
+
+.cell:last-child[data-move-now='right']{ border-radius:5px 0 0 5px; }
+.cell:last-child[data-move-now='down']{ border-radius:5px 5px 0 0; }
+.cell:last-child[data-move-now='left']{ border-radius:0 5px 5px 0; }
+.cell:last-child[data-move-now='up']{ border-radius:0 0 5px 5px ; }
+
+
+
+.container{
+    padding: 0;
+}
+
+.playGround_con{
+    position: relative;
+    margin: 50px auto;
+    width:1000px !important;
+    height:1000px !important;
+    margin-top:100px;
+}
+
+.playGround{
+    padding: 0;
+    margin: 0;
+    height: 1000px !important;
+    width:1000px !important;
+    /*background: #000;*/
+    box-shadow: 0px 0px 5px #000;
+}
+.playGroundFakeBox{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    /*border:10px solid #999;*/
+    background: url('../img/floor.jpg');
+
+}
+
+.meal{
+    position: absolute;
+    background: url('../img/fruits.png');
+    background-position:  0 0;
+    background-size: auto 100%;
+    /*border-radius: 100%;*/
+    z-index: 5;
+    animation-name: zoomBounce2;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+}
+
+.history{
+    /*position: absolute;
+    left: 0;
+    right: 0;
+    height:40px;
+    border:1px solid #000;
+    top:-40px;*/
+    margin-top: -100px;
+
+}
+
+
+.game-live{
+    text-align: right;
+    font-size: 140%;
+}
+.game-live .fa{
+    margin-left: 2px;
+    color:#cc0000;
+}
+.score{
+    font-size: 140%;
+    padding-top: 2px;
+    color:#cc0000;
+    text-align: left;
+    font-family: 'Comfortaa', cursive, Arial;
+}
+.history .col-2{
+    text-align: right;
+}
+@media(min-width: 991px){
+    .history .col-2{
+        text-align: left;
+    }
+}
+
+.directionButtonCon{
+    margin-top: 50px;
+}
+.directionButtonCon>div{
+    text-align: center;
+    padding: 15px;
+}
+.directionButtonCon .btn{
+    padding:30px 50px;
+    font-size: 300%;
+}
+.controlButtonCon{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.controlButtonCon .btn{
+    padding:30px 50px;
+    font-size: 300%;
+    margin: 20px 10px;
+}

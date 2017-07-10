@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container playGround_con">
+</div>
+<!--<div class="container allControlButtonCon">
+  <div class="col-xs-12 directionButtonCon">
+    <div class="col-xs-12">
+      <button type="button" class="btn controlButton" data-keycode="38" data-key="up"><span class="fa fa-arrow-up"></span></button>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn controlButton" data-keycode="37" data-key="left"><span class="fa fa-arrow-left"></span></button>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn controlButton" data-keycode="39" data-key="right"><span class="fa fa-arrow-right"></span></button>
+    </div>
+    <div class="col-xs-12">
+      <button type="button" class="btn controlButton" data-keycode="40" data-key="down"><span class="fa fa-arrow-down"></span></button>
+    </div>
+  </div>
+  <div class="col-xs-12 controlButtonCon">
+    <button type="button" class="btn controlButton" data-keycode="83" data-key="s"><span class="fa fa-play"></span></button>
+    <button type="button" class="btn controlButton" data-keycode="17" data-key="ctrl"><span class="fa fa-pause"></span></button>
+    <!-- <button type="button" class="btn controlButton" data-keycode="32" data-key="space">Resume</button> -->
+    <!--<button type="button" class="btn controlButton" data-keycode="82" data-key="r"><span class="fa fa-refresh"></span></button>
+    <!-- <br> -->
+    <!-- <button type="button" class="btn controlButton" data-keycode="67" data-key="c">Clear Best Score</button> -->
+  <!--</div>-->
+
+
+
+
+</div>
+<div id="keyboard-shortcuts" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Keyboard Shortcuts</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tr><td>Up: Up Arrow</td><td>Down: Down Arrow</td></tr>
+          <tr><td>Left: Left Arrow</td><td>Right: Right Arrow</td></tr>
+          <tr><td>Start: S</td><td>Pause: Ctrl</td></tr>
+          <tr><td>Resume: Space/S</td><td>Clear Best Score: C</td></tr>
+          <tr><td>Restart: R</td><td></td></tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
